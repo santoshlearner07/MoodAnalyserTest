@@ -42,9 +42,10 @@ public class MoodAnalyserTest {
             moodAnalyser.analyseMood(null);
         } catch (MoodAnalysisException e) {
             e.printStackTrace();
-            Assert.assertEquals("Mood Analysis Exception Give proper mood", e.getMessage());
+            Assert.assertEquals(MoodAnalysisException.ExceptionType.ENTERED_NULL, e.type);
         }
     }
+
 
 
     @Test
